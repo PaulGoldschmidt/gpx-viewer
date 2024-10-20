@@ -1,0 +1,444 @@
+/* GPX Viewer Main page */
+
+#content > .wrap {
+	max-width: 1100px;
+}
+
+.gpxv-params {
+	float: left;
+	max-width: 500px;
+}
+
+.gpxv-option,
+.gpxv-option label {
+	clear: both;
+	width: auto;
+	float: left;
+}
+.gpxv-option input[type="color"],
+.gpxv-option select {
+	width: 50px !important;
+	float: left;
+	margin-left: 10px;
+	padding: 3px 5px;
+}
+.gpxv-option input[type="color"] {
+	line-height: 1.3em;
+}
+.gpxv-option select {
+	height: auto;
+}
+
+.gpxv-head {
+	clear: both;
+	float: left;
+	margin-top: 1.3em;
+	width: 100%;
+}
+.gpxv-head p {
+	margin: 0 0 0 0;
+	font-weight: 600;
+}
+.gpxv-head > div {
+	float: left;
+	padding: 0.5em 0.5em 0.5em 0.5em  !important;
+	margin-bottom: 0.5em;
+	width: 60%;
+}
+.gpxv-head .dashicons {
+	float: left;
+	position: relative;
+	top: 0.4em;
+	left: -2.0em;
+	color: #087;
+	width: 20px;
+}
+
+.gpxv-list {
+	clear: both;
+	float: left;
+	height: 32em;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	border: 1px solid #08b;
+}
+
+.gpxv-select {
+	line-height: 1.0em;
+	border: 0; 
+}
+.gpxv-select tbody td {
+	padding: 0.2em 0.4em;
+	border: 0; 
+}
+.gpxv-select tbody > tr:nth-of-type(even) {
+	background: #eef;
+}
+.gpxv-select tbody > tr:nth-of-type(odd) {
+	background: #fff;
+}
+.gpxv-select tbody td:hover {
+	color: white;
+	background-color: #bbb;
+}
+.gpxv-select button {
+	color: inherit !important;
+	background: inherit !important;
+	border-style: none;
+	padding: inherit !important;
+	margin: inherit !important;
+	font-size: inherit !important;
+}
+.gpxv-select .selected {
+	background-color: #ff0;
+}
+.gpxv-view {
+	float: left;
+	width: 500px;
+	border: 2px solid #9e9e9e;
+	margin-left: 3em !important;
+	margin-top: 0 !important;
+	margin-bottom: 2.0em !important;
+}
+#gpxv-load {
+	max-width: none !important;
+}
+#gpxv-load > div > table {
+	border-collapse: unset;
+}
+
+/* Messages */
+#gpxv-successmessage,
+#gpxv-errormessage {
+	border-radius: 4px;
+	margin: 10px 0 18px;
+	padding: 8px 35px 8px 14px;
+	text-shadow: 0 1px 0 #fff;
+}
+#gpxv-successmessage {
+	background: #c7ffc7;
+	border: 1px solid #68e868;
+	color: #2ca42c;
+}
+#gpxv-errormessage {
+	background: #fedbdb;
+	border: 1px solid #ffc9c9;
+	color: #ff5656;
+}
+
+
+/* Map display */
+
+.wp-admin #map-container {
+	width: 610px !important;
+}
+#map-container {
+	clear: both;
+	position:relative;
+}
+#map-container.small-viewport {
+	height: 500px;
+}
+.small-viewport .map-control.profile-button {
+	display: none;
+}
+.map-control > img,
+.map-control.dashicons {
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	font-size: 25px;
+}
+.map-control-container .map-control {
+	margin: 0 0 0 10px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+	clear: none;
+	float: right;
+}
+.map-control.dashicons:hover {
+	background-color: #f4f4f4;
+	color: #0ba;
+}
+.map-control.screen-button::before {
+	content: "\f211";
+}
+.map-control.screen-button.active::before {
+	content: "\f506";
+}
+
+.map-control .map-select {
+	visibility: hidden;  
+	background-color: white;
+	padding-left: 0.5rem;
+	font-size: 0.8rem;
+	line-height: 20px;
+	height: 20px;
+	width: 130px;
+}
+.map-select:hover {
+	background-color: #f4f4f4;
+	color: #0ba;
+}
+
+.map-control:hover .map-select,
+.map-control:focus .map-select,
+.map-control:active .map-select {
+	visibility: visible;
+}
+
+.dashicons-download {
+	padding-top: 5px;
+}
+
+#leaflet-map {
+	height: 500px;
+}
+
+/* Profile display */
+/*--------------------------------------------------------------
+9.0 Tables
+--------------------------------------------------------------*/
+
+.track-info {
+	float: right;
+	position: absolute;
+	max-height: 220px;
+	text-align: left;
+	top: 50px;
+	right: 0px;
+	width: 300px;
+	height: 220px;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	z-index: 800;
+}
+.track-info {
+	-ms-transition: -ms-transform 0.8s, max-height 0.8s;
+	-webkit-transition: -webkit-transform 0.8s, max-height 0.8s;
+	-moz-transition: -moz-transform 0.8s, max-height 0.8s;
+	-o-transition: -o-transform 0.8s, max-height 0.8s;
+	transition: transform 0.8s, max-height 0.8s;
+	-ms-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
+.track-info.hidden {
+	max-height: 0;
+	-ms-transform: translateX(400px);
+	-webkit-transform: translateX(400px);
+	-moz-transform: translateX(400px);
+	-o-transform: translateX(400px);
+	transform: translateX(400px);
+	-ms-transition: -ms-transform 0.8s, max-height 0.8s;
+	-webkit-transition: -webkit-transform 0.8s, max-height 0.8s;
+	-moz-transition: -moz-transform 0.8s, max-height 0.8s;
+	-o-transition: -o-transform 0.8s, max-height 0.8s;
+	transition: transform 0.8s, max-height 0.8s;
+	-ms-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+.track-info h3 {
+	font-size: 150%;
+}
+.track-info h3:first-child {
+	padding: 0 5px;
+	margin-top: 0;
+	margin-bottom: 2px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	background-color:#808080;
+	color:#ffffff;
+}
+.track-info table {
+	border-collapse: collapse;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+.track-info thead th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: 0.5em;
+}
+
+.track-info th {
+	padding: 0.4em;
+	text-align: left;
+}
+
+.track-info tr {
+	border-bottom: 1px solid #eee;
+}
+
+.track-info td {
+	padding: 0.4em;
+}
+
+.track-info th:first-child,
+.track-info td:first-child {
+	padding-left: 0;
+}
+
+.track-info th:last-child,
+.track-info td:last-child {
+	padding-right: 0;
+}
+
+.track-info .content {
+	height: auto;
+	line-height: 1;
+	margin: 0 5px 5px 5px;
+}
+.track-info .content .properties {
+	margin: 10px 0 10px 30px;
+}
+.track-info .no-data {
+	text-align: center;
+	color: red;
+	height: 20px;
+	line-height: 20px;
+	border: 1px dotted red;
+	margin: 5px;
+}
+.track-info svg + .gpx-no-data {
+	display: none;
+}
+.small-viewport .track-info .no-data {
+	display: block;
+	margin-top: 2px;
+	height: 153px;
+	line-height: 153px;
+}
+.small-viewport .track-info {
+	position: static;
+	min-width: 100%;
+	width: 100%;
+	border: 0;
+}
+.small-viewport .track-info .properties {
+	margin: 10px 0;
+}
+
+a.gpx-file {
+	margin-left: 5px;
+	font-size: 15px;
+	line-height: 1.8;
+	color:#ffffff;
+	background: #808080;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 0;
+	float: right;
+}
+.small-viewport a.gpx-file {
+	color: inherit;
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0 2px;
+	pointer-events: auto;
+	cursor: pointer;
+	margin: 0 5px;
+}
+.small-viewport .track-info .content {
+	float: left;
+	margin-top: 0;
+}
+.small-viewport .content > * {
+	max-width: 280px;
+	width: 240px;
+	float: left;
+	vertical-align: bottom;
+	margin-top: 5px;
+	padding: 0 5px;
+}
+
+#storebutton button,
+.update-close-button {
+	margin-top: 1.0em;
+}
+
+/* svg */
+
+.track-info svg {
+	min-height: 220px;
+	max-height: 220px;
+	max-width: 290px;
+	margin: 0;
+}
+.small-viewport .track-info svg {
+	margin-top: 0;
+	height: 170px;
+	min-height: 170px;
+	max-height: 170px;
+	max-width: 270px;
+}
+.elevation-profile {
+	z-index: 1000;
+	position: relative;
+	margin-bottom: 5px;
+}
+.track-info .axis {
+	stroke: #000;
+	stroke-width: 1px;
+	marker-end: url(#t);
+}
+.track-info text {
+	font-family: monospace;
+	font-size: 12px;
+	stroke: none;
+	fill: #000;
+}
+.track-info .line {
+	stroke: #b5b5b5;
+	stroke-width: 1px;
+	font-family: serif;
+	font-size: 10px;
+}
+.track-info rect {
+	stroke: #4a4a4a;
+	fill: none;
+}
+.track-info .profile-line {
+	stroke: #00f;
+	fill: none;
+	stroke-width: 3px;
+}
+.track-info .move-line {
+	stroke: #f00;
+	fill: none;
+	stroke-width: 1px;
+}
+
+.upload-dialog input {
+	font-weight: 600;
+}
+
+input[type="search"] {
+	color: #666;
+	line-height: normal;
+	background: #fff;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	border: 1px solid #bbb;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	padding: 0.7em;
+	width: 100%;
+}
